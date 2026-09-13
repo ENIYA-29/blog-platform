@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BlogSphere - Blog Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">BlogSphere</div>
+
+        <nav>
+            <a href="#" onclick="showSection('home')">Home</a>
+            <a href="#" onclick="showSection('posts')">Posts</a>
+            <a href="#" onclick="showSection('login')">Login</a>
+            <a href="#" onclick="showSection('register')">Register</a>
+        </nav>
+    </header>
+
+
+    <!-- HOME -->
+    <section id="home" class="section active">
+
+        <div class="hero">
+            <h1>Welcome to BlogSphere</h1>
+
+            <p>
+                Share your ideas, create amazing posts,
+                and connect with other users.
+            </p>
+
+            <button onclick="showSection('posts')">
+                Explore Posts
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- POSTS -->
+    <section id="posts" class="section">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Blog Posts</h2>
+
+                <button onclick="showSection('createPost')">
+                    + Create Post
+                </button>
+            </div>
+
+            <div id="postList" class="post-grid">
+
+                <!-- Posts will appear here using JavaScript -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CREATE POST -->
+    <section id="createPost" class="section">
+
+        <div class="form-container">
+
+            <h2>Create New Post</h2>
+
+            <form id="postForm">
+
+                <label for="postTitle">
+                    Post Title
+                </label>
+
+                <input
+                    type="text"
+                    id="postTitle"
+                    placeholder="Enter post title"
+                    required
+                >
+
+
+                <label for="postContent">
+                    Content
+                </label>
+
+                <textarea
+                    id="postContent"
+                    placeholder="Write your blog content..."
+                    rows="8"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Publish Post
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOGIN -->
+    <section id="login" class="section">
+
+        <div class="form-container">
+
+            <h2>User Login</h2>
+
+            <form id="loginForm">
+
+                <label for="loginEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="form-link">
+                Don't have an account?
+                <a href="#" onclick="showSection('register')">
+                    Register
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- REGISTER -->
+    <section id="register" class="section">
+
+        <div class="form-container">
+
+            <h2>Create Account</h2>
+
+            <form id="registerForm">
+
+                <label for="registerName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label for="registerEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label for="registerPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Create a password"
+                    required
+                >
+
+
+                <button type="submit">
+                    Register
+                </button>
+
+            </form>
+
+            <p class="form-link">
+                Already have an account?
+                <a href="#" onclick="showSection('login')">
+                    Login
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 BlogSphere. All Rights Reserved.
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
